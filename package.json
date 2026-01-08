@@ -1,0 +1,36 @@
+{
+  "name": "space-simulator",
+  "version": "0.1.0",
+  "private": true,
+  "main": "electron/main.js",
+  "description": "3D Space Simulation Sandbox",
+  "author": "Your Name",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "electron": "electron .",
+    "start": "concurrently \"npm run dev\" \"npm run electron:wait\"",
+    "electron:wait": "wait-on http://localhost:5173 && electron .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.88.0",
+    "@react-three/fiber": "^8.15.0",
+    "@react-three/postprocessing": "^2.15.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.158.0",
+    "zustand": "^4.4.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "vite": "^5.0.5",
+    "wait-on": "^7.2.0"
+  }
+}
